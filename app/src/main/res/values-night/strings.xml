@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome_intercorp_retail">Welcome Intercorp Retail</string>
+    <string name="guardar">Guardar</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="edad">Edad</string>
+    <string name="fecha_de_nacimiento">Fecha de nacimiento</string>
+    <string name="default_web_client_id">168564772435-nu2frdaprp0qaj9e5qp4kdrtotkv0m5o.apps.googleusercontent.com</string>
+</resources>

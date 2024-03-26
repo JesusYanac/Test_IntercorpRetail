@@ -1,0 +1,70 @@
+plugins {
+    id 'com.android.application'
+    id("com.google.gms.google-services")
+}
+
+android {
+    namespace 'com.intercorp.retail'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.intercorp.retail"
+        minSdk 31
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            // Configuración de la firma para la versión de release
+            storeFile file("C:\\Users\\tyanac\\StudioProjects\\Intercorpretail\\my-release-key.jks") // Ubicación de tu archivo .jks
+            storePassword "jesusyanac" // Contraseña de tu keystore
+            keyAlias "key0" // Alias de tu clave
+            keyPassword "jesusyanac" // Contraseña de tu clave
+        }
+    }
+    buildTypes {
+        release {
+            // Habilita la minimización del APK
+            minifyEnabled true
+            // Archivo de configuración ProGuard para usar en la compilación de lanzamiento
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            // Configuración de la firma
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.gms:play-services-tasks:18.1.0'
+    implementation 'com.google.firebase:firebase-auth:22.3.1'
+    implementation 'com.google.firebase:firebase-database:20.3.1'
+    implementation 'com.google.firebase:firebase-storage:20.3.0'
+    implementation 'com.google.android.gms:play-services-auth:21.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+
+    // Import the Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
+
+
+    // TODO: Add the dependencies for Firebase products you want to use
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation("com.google.firebase:firebase-analytics")
+
+
+}

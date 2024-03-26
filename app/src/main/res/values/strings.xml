@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Login Firebase</string>
+    <string name="welcome_intercorp_retail">Welcome Intercorp Retail</string>
+    <string name="guardar">Guardar</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="edad">Edad</string>
+    <string name="fecha_de_nacimiento">Fecha de nacimiento</string>
+    <string name="default_web_client_id">AIzaSyBPIw30AxV0oYHh3szsuP6sLFreAEW3I80</string>
+<!--
+    <string name="default_web_client_id">AIzaSyCOJJMU8YXMqP4pxY27ZnsjIRowbS6qlWI\n</string>
+-->
+</resources>
